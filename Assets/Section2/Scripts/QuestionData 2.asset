@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2838a14d4d0494fbea7e56b52e66ad, type: 3}
   m_Name: QuestionData 2
   m_EditorClassIdentifier: 
-  question: "Con g\xE0 c\xF3 m\u1EA5y ch\xE2n"
-  answerA: 1
-  answerB: 2
-  answerC: 3
-  answerD: 4
+  question: "\"Phin\" l\xE0 v\u1EADt d\u1EE5ng th\u01B0\u1EDDng d\xF9ng trong qu\xE1
+    tr\xECnh pha ch\u1EBF th\u1EE9c u\u1ED1ng n\xE0o ?"
+  answerA: "Tr\xE0"
+  answerB: "C\xE0 ph\xEA"
+  answerC: "N\u01B0\u1EDBc ng\u1ECDt"
+  answerD: "R\u01B0\u1EE3u"
   correctAnswer: b
