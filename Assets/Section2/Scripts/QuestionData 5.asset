@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2838a14d4d0494fbea7e56b52e66ad, type: 3}
   m_Name: QuestionData 5
   m_EditorClassIdentifier: 
-  question: "C\xE2u \"B\u1EA1n c\xF3 \u0111i h\u1ECDc kh\xF4ng\" thu\u1ED9c lo\u1EA1i
-    c\xE2u g\xEC?"
-  answerA: "C\xE2u c\u1EA7u khi\u1EBFn"
-  answerB: "C\xE2u c\u1EA3m th\xE1n"
-  answerC: "C\xE2u nghi v\u1EA5n"
-  answerD: "C\xE2u k\u1EC3"
+  question: "Qu\u1ED1c gia n\xE0o c\xF3 d\xE2n s\u1ED1 \xEDt nh\u1EA5t \u0110\xF4ng
+    Nam \xC1?"
+  answerA: Indonesia
+  answerB: Philippines
+  answerC: Prurei
+  answerD: "Th\xE1i Lan"
   correctAnswer: c

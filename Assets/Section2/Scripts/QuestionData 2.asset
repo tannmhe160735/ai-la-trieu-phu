@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QuestionData 2
   m_EditorClassIdentifier: 
   question: "\"Phin\" l\xE0 v\u1EADt d\u1EE5ng th\u01B0\u1EDDng d\xF9ng trong qu\xE1
-    tr\xECnh pha ch\u1EBF th\u1EE9c u\u1ED1ng n\xE0o ?"
+    tr\xECnh pha ch\u1EBF th\u1EE9c u\u1ED1ng n\xE0o?"
   answerA: "Tr\xE0"
   answerB: "C\xE0 ph\xEA"
   answerC: "N\u01B0\u1EDBc ng\u1ECDt"

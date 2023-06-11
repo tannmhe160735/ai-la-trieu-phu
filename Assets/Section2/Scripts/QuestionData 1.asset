@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QuestionData 1
   m_EditorClassIdentifier: 
   question: "\u0110\xE2u kh\xF4ng ph\u1EA3i l\xE0 t\xEAn m\u1ED9t nh\xF3m m\xE1u
-    \u1EDF c\u01A1 th\u1EC3 ng\u01B0\u1EDDi ?"
+    \u1EDF c\u01A1 th\u1EC3 ng\u01B0\u1EDDi?"
   answerA: O
   answerB: A
   answerC: D
