@@ -44,7 +44,8 @@ namespace Section2
         [SerializeField] private AudioClip m_MusicMainTheme;
         [SerializeField] private AudioClip m_SfWrongAnswer;
         [SerializeField] private AudioClip m_SfCorrectAnswer;
-        [SerializeField] private AudioClip m_SfVictoryAnswer;
+        [SerializeField] private AudioClip m_SfVictory;
+        [SerializeField] private AudioClip m_OpenTheme;
 
 
         [SerializeField] private GameObject m_HomePanel, m_GamePanel, m_GameoverPanel, m_VictoryPanel;
@@ -57,6 +58,8 @@ namespace Section2
         // Start is called before the first frame update
         void Start()
         {
+            m_AudioSource.Stop();
+            m_AudioSource.PlayOneShot(m_OpenTheme);
             SetGameState(GameState.Home);
             m_QuestionsIndex = 0;
             InitQuestion(0);
@@ -73,9 +76,18 @@ namespace Section2
             bool traLoiDung = false;
             if (m_QuestionData[m_QuestionsIndex].correctAnswer == pSelectedAnswer)
             {
-                traLoiDung = true;
-                m_AudioSource.PlayOneShot(m_SfCorrectAnswer);
-                Debug.Log("Câu trả lời chính xác");
+                if (m_QuestionsIndex >= m_QuestionData.Length - 1)
+                {
+                    traLoiDung = true;
+                    Invoke("Lastquestion", 5f);
+                    Debug.Log("Câu trả lời chính xác");
+                }
+                else
+                {
+                    traLoiDung = true;
+                    m_AudioSource.PlayOneShot(m_SfCorrectAnswer);
+                    Debug.Log("Câu trả lời chính xác");
+                }
             }
             else
             {
@@ -101,17 +113,7 @@ namespace Section2
             }
             if (traLoiDung)
             {
-                if (m_QuestionsIndex >= m_QuestionData.Length - 1)
-                {
-                    Victory();
-                    m_AudioSource.Stop();
-                    m_AudioSource.PlayOneShot(m_SfVictoryAnswer);
-                    Debug.Log("Bạn đã chiến thắng");
-                    return;
-                }
-
                 Invoke("NextQuestion", 2f);
-
             }
         }
 
@@ -119,6 +121,14 @@ namespace Section2
         {
             m_QuestionsIndex++;
             InitQuestion(m_QuestionsIndex);
+        }
+
+        private void Lastquestion()
+        {
+            m_AudioSource.PlayOneShot(m_SfCorrectAnswer);
+            Invoke("Victory", 3f);
+            Debug.Log("Bạn đã chiến thắng");
+            return;
         }
 
         private void GameOver()
@@ -130,6 +140,8 @@ namespace Section2
 
         private void Victory()
         {
+            m_AudioSource.Stop();
+            m_AudioSource.PlayOneShot(m_SfVictory);
             SetGameState(GameState.Victory);
             m_QuestionsIndex = 0;
             InitQuestion(0);
@@ -170,7 +182,7 @@ namespace Section2
 
         public void btn_Home_Pressed()
         {
-            Start();
+            Invoke("Start", 2f);
         }
     }
 }
